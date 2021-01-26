@@ -1,24 +1,110 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UILessonsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" keyboardDismissMode="onDrag" translatesAutoresizingMaskIntoConstraints="NO" id="Hyb-vP-rUp">
+                                <rect key="frame" x="0.0" y="0.0" width="415" height="898"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8NJ-ZQ-kbh">
+                                        <rect key="frame" x="0.0" y="0.0" width="415" height="898"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Please login" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BaX-iw-JxL">
+                                                <rect key="frame" x="139" y="138" width="96" height="35"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TRS-cJ-Wh4">
+                                                <rect key="frame" x="166" y="307" width="42" height="30"/>
+                                                <state key="normal" title="Log in"/>
+                                                <connections>
+                                                    <action selector="handleButtonTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v9C-T9-WWK"/>
+                                                </connections>
+                                            </button>
+                                            <slider opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="dDT-Xc-Xdg">
+                                                <rect key="frame" x="148" y="812" width="118" height="30"/>
+                                                <connections>
+                                                    <action selector="handleScroll:" destination="BYZ-38-t0r" eventType="valueChanged" id="ujj-vY-yXZ"/>
+                                                </connections>
+                                            </slider>
+                                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" id="HzR-xm-anX">
+                                                <rect key="frame" x="66" y="244" width="277" height="34"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" id="wye-nO-cQf">
+                                                <rect key="frame" x="66" y="181" width="277" height="34"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.88342439018862096" green="0.93159777599456439" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstItem="TRS-cJ-Wh4" firstAttribute="centerX" secondItem="8NJ-ZQ-kbh" secondAttribute="centerX" id="APJ-DH-kO7"/>
+                                            <constraint firstItem="BaX-iw-JxL" firstAttribute="centerX" relation="lessThanOrEqual" secondItem="8NJ-ZQ-kbh" secondAttribute="centerX" id="DhM-Ni-joa"/>
+                                            <constraint firstItem="TRS-cJ-Wh4" firstAttribute="top" secondItem="HzR-xm-anX" secondAttribute="bottom" constant="29.000000000000057" id="L3j-iN-8hn"/>
+                                            <constraint firstItem="wye-nO-cQf" firstAttribute="top" secondItem="BaX-iw-JxL" secondAttribute="bottom" constant="7" id="Piz-I1-9uX"/>
+                                            <constraint firstAttribute="bottom" secondItem="dDT-Xc-Xdg" secondAttribute="bottom" constant="55" id="ZEl-TQ-aEY"/>
+                                            <constraint firstItem="dDT-Xc-Xdg" firstAttribute="centerX" secondItem="8NJ-ZQ-kbh" secondAttribute="centerX" id="mii-jh-dny"/>
+                                            <constraint firstItem="dDT-Xc-Xdg" firstAttribute="top" secondItem="TRS-cJ-Wh4" secondAttribute="bottom" constant="475" id="nIJ-HS-FTn"/>
+                                            <constraint firstItem="HzR-xm-anX" firstAttribute="top" secondItem="BaX-iw-JxL" secondAttribute="bottom" constant="71" id="tjR-Vq-6FQ"/>
+                                            <constraint firstItem="BaX-iw-JxL" firstAttribute="top" secondItem="8NJ-ZQ-kbh" secondAttribute="top" constant="138" id="uAb-Cq-B1j"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="8NJ-ZQ-kbh" firstAttribute="leading" secondItem="Hyb-vP-rUp" secondAttribute="leading" id="3DA-EE-fLz"/>
+                                    <constraint firstAttribute="bottom" secondItem="8NJ-ZQ-kbh" secondAttribute="bottom" id="SOX-zy-hZB"/>
+                                    <constraint firstItem="8NJ-ZQ-kbh" firstAttribute="top" secondItem="Hyb-vP-rUp" secondAttribute="top" id="dfo-lC-qJK"/>
+                                    <constraint firstItem="8NJ-ZQ-kbh" firstAttribute="width" secondItem="Hyb-vP-rUp" secondAttribute="width" id="f4K-UV-TZL"/>
+                                    <constraint firstAttribute="trailing" secondItem="8NJ-ZQ-kbh" secondAttribute="trailing" id="pWX-9C-SbX"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="rfT-ra-UPm"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="Zgd-CD-Igm"/>
+                            </scrollView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Hyb-vP-rUp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="0ly-bE-eNk"/>
+                            <constraint firstAttribute="trailing" secondItem="Hyb-vP-rUp" secondAttribute="trailing" id="KqK-IH-f2a"/>
+                            <constraint firstItem="Hyb-vP-rUp" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.903382" id="Nn3-w8-pdg"/>
+                            <constraint firstAttribute="bottom" secondItem="Hyb-vP-rUp" secondAttribute="bottom" id="fvS-Np-0hI"/>
+                            <constraint firstItem="Hyb-vP-rUp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mkq-Ss-dPY"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="loginButton" destination="TRS-cJ-Wh4" id="25d-2N-7C1"/>
+                        <outlet property="loginTextField" destination="wye-nO-cQf" id="K6y-xD-Gdl"/>
+                        <outlet property="passwordTextField" destination="HzR-xm-anX" id="fSm-KB-Ear"/>
+                        <outlet property="scrollView" destination="Hyb-vP-rUp" id="jve-O3-bez"/>
+                        <outlet property="welcomeTextField" destination="BaX-iw-JxL" id="mV0-f0-VvB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-214.49275362318843" y="78.348214285714278"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
