@@ -212,7 +212,7 @@
                     <navigationItem key="navigationItem" title="Groups" id="0vC-qa-jFF">
                         <barButtonItem key="rightBarButtonItem" title="Search" id="Txl-8o-Adq">
                             <connections>
-                                <segue destination="dIS-gJ-cv1" kind="show" id="CVb-iV-0L8"/>
+                                <segue destination="dIS-gJ-cv1" kind="show" id="u2S-cO-XyF"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -245,16 +245,14 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="VaS-Hg-uVy">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Lez-Cx-ilY">
+                        <barButtonItem key="leftBarButtonItem" title="Item" systemItem="cancel" id="dLc-yE-gmA">
                             <connections>
-                                <action selector="cancelTapped:" destination="GNo-Ck-QN5" id="9pu-fL-ckn"/>
-                                <segue destination="GNo-Ck-QN5" kind="unwind" unwindAction="myUnwindActionWithUnwindSegue:" id="6wI-bf-nmu"/>
+                                <action selector="cancelTapped:" destination="RJn-Ra-kll" id="JPj-CA-fhu"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Gd-j2-agh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="GNo-Ck-QN5" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3936" y="496"/>
         </scene>
