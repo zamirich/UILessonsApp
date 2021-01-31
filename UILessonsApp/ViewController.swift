@@ -9,8 +9,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    let login = "Z"
-    let password = "1234"
+    let login = "z"
+    let password = "1"
     
     @IBOutlet weak var welcomeTextField: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
@@ -31,7 +31,7 @@ class ViewController: UIViewController {
             self.loginButton.setTitle("You logged in sucessfully", for: .normal)
         }
     }
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
 
