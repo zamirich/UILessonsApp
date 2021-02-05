@@ -8,9 +8,10 @@
 import UIKit
 
 class FriendsTableViewController: UITableViewController {
-        
-    let friendsList = [["Joe Baden"], ["Emannuel Macrone", "Angela Merkel"],[ "Vladimir Putin"]]
-    let headersList = ["B", "M", "P"]
+    
+    //TODO to replace with "Friend" class/struct
+    let friendsList = [["Shinzo Abe", "Ilham Aliyev", "Bashar al-Assad"], ["Joe Baden"], ["Rodrigo Duterte"], ["Recep Tayyip Erdoğan"], ["Xi Jinping", "Boris Johnson"], ["Sebastian Kurz"], ["Emannuel Macrone", "Angela Merkel", "Narendra Modi"], ["Benjamin Netanyahu"],  [ "Vladimir Putin"], ["Hassan Rouhani"]]
+    let headersList = ["A", "B", "D", "E", "J", "K", "M", "N", "P", "R"]
     
     @IBOutlet weak var friendTableView: UIView!
     
@@ -43,10 +44,10 @@ class FriendsTableViewController: UITableViewController {
         return self.headersList[section]
     }
     
-    //this generates a photo collection
+    //this generates a photo collection screen
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(identifier: "myCollection")
+        let vc = storyboard.instantiateViewController(identifier: "myFriendCollection")
         vc.modalPresentationStyle = .fullScreen
         self.navigationController?.pushViewController(vc, animated: true)
     }

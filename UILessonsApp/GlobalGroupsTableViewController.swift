@@ -9,12 +9,14 @@ import UIKit
 
 class GlobalGroupsTableViewController: UITableViewController {
 
+    let globalGroupList = ["CNBC", "RT", "CNN", "Sputnik"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
-
+        self.tableView!.register(UINib(nibName: "GroupTableViewCell", bundle: nil), forCellReuseIdentifier: "myGroupCell")
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
@@ -23,15 +25,22 @@ class GlobalGroupsTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return self.globalGroupList.count
     }
 
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "myGroupCell", for: indexPath) as! GroupTableViewCell
 
+        cell.myGroupNameLabel.text = self.globalGroupList[indexPath.item]
+        // Configure the cell...
+
+        return cell
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
@@ -81,5 +90,9 @@ class GlobalGroupsTableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    
+    //TODO do not work
+    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }
